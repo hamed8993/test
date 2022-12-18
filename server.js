@@ -1,9 +1,6 @@
 const express = require("express");
 const app = express();
-app.use(express.static("./front"));
 const http = require("http");
-const path = require("path");
-app.use(express.static(path.join(__dirname, '/front')));
 
 const server = http.createServer(app);
 const { Server } = require("socket.io");
